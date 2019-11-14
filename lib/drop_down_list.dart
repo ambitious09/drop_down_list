@@ -34,7 +34,13 @@ class DropDownList extends StatefulWidget {
 }
 
 class _DropDownListState extends State<DropDownList> {
-
+   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print("icpath=${widget.iconPath}");
+    print("icpath=${widget.rightPath}");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +96,7 @@ class _DropDownListState extends State<DropDownList> {
                           height: 24,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage(widget.iconPath),
+                                image: AssetImage(widget.iconPath??Icons.add),
                                 fit: BoxFit.fill),
                           ),
                           child: Text(
