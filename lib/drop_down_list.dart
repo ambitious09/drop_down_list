@@ -90,7 +90,6 @@ class _DropDownListState extends State<DropDownList> {
                   flex: 1,
                   child: Stack(
                     children: <Widget>[
-//                          Image.asset("assets/ic_q&a.png"),
                       Container(
                           padding: EdgeInsets.only(top: 2, bottom: 2),
                           width: 28,
@@ -101,7 +100,7 @@ class _DropDownListState extends State<DropDownList> {
                                 fit: BoxFit.fill),
                           ),
                           child: Text(
-                            widget.indexString,
+                            items[index].title,
                             style: TextStyle(color: widget.iconTextColor, fontSize: 12),
                             textAlign: TextAlign.center,
                           ))
