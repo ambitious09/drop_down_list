@@ -16,6 +16,8 @@ class DropDownList extends StatefulWidget {
   final String image;
   final String  iconImage;
   final String backImage;
+  final Color barTitleColor;
+  final MyAppBar bar;
 
   const DropDownList(
       {Key key,
@@ -29,6 +31,8 @@ class DropDownList extends StatefulWidget {
         this.image,
         this.iconImage,
         this.backImage,
+        this.barTitleColor,
+        this.bar
      }
       ): assert(items.length > 0 && items != null),
         super(key: key);
@@ -42,7 +46,7 @@ class _DropDownListState extends State<DropDownList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(title: widget.title,backImg: widget.backImage,titleColor: widget.iconTextColor,),
+      appBar: widget.bar,
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
