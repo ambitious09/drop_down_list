@@ -29,7 +29,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     Color _backgroundColor;
-
+      print("centerTitle=$centerTitle");
     if (backgroundColor == null) {
       _backgroundColor = Utils.getBackgroundColor(context);
     } else {
