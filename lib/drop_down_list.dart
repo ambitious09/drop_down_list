@@ -24,7 +24,7 @@ class DropDownList extends StatefulWidget {
         this.answerColor,
         this.iconTextColor,
         this.lineColor,
-        this.image,
+        this.image, 
         this.iconImage,
         this.backImage,
      }
