@@ -16,9 +16,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar(
       {Key key,
       this.backgroundColor,
-        this.title:"",
-      this.centerTitle: "",
-      this.actionName: "",
+        this.title,
+      this.centerTitle,
+      this.actionName,
       this.backImg,
       this.onPressed,
       this.isBack: false,
@@ -58,7 +58,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       alignment: centerTitle==null ? Alignment.centerLeft : Alignment.center,
                       width: double.infinity,
                       child: Text(
-                          centerTitle ,
+                          title==null ? centerTitle : title,
                           style: TextStyle(
                             fontSize: 18,
                             color: titleColor,
@@ -92,7 +92,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                           minWidth: 60.0,
                         )
                     ),
-                    child: actionName.isEmpty ? Container() :
+                    child: actionName==null? Container() :
                     FlatButton(
                       child: Text(actionName, key: const Key('actionName')),
                       textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colors.green : Colors.black12,
