@@ -57,13 +57,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Container(
                       alignment: centerTitle==null ? Alignment.centerLeft : Alignment.center,
                       width: double.infinity,
-                      child: Text(
+                      child: centerTitle!=null?Text(
                           "sadad",
                           style: TextStyle(
                             fontSize: 18,
                             color: titleColor,
                           )
-                      ),
+                      ):SizedBox(),
                       padding: const EdgeInsets.symmetric(horizontal: 48.0),
                     )
                   ],
