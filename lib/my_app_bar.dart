@@ -16,7 +16,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar(
       {Key key,
       this.backgroundColor,
-        this.title,
+        this.title:"",
       this.centerTitle: "",
       this.actionName: "",
       this.backImg,
