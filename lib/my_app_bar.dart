@@ -29,7 +29,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     Color _backgroundColor;
-      print("centerTitle=$centerTitle");
+
     if (backgroundColor == null) {
       _backgroundColor = Utils.getBackgroundColor(context);
     } else {
@@ -57,13 +57,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Container(
                       alignment: centerTitle==null ? Alignment.centerLeft : Alignment.center,
                       width: double.infinity,
-                      child: centerTitle!=null?Text(
-                          "sadad",
+                      child: Text(
+                          title==null?centerTitle:title,
                           style: TextStyle(
                             fontSize: 18,
                             color: titleColor,
                           )
-                      ):SizedBox(),
+                      ),
                       padding: const EdgeInsets.symmetric(horizontal: 48.0),
                     )
                   ],
