@@ -46,9 +46,7 @@ class _DropDownListState extends State<DropDownList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: widget.bar,
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
