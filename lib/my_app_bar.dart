@@ -21,7 +21,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.actionName: "",
       this.backImg,
       this.onPressed,
-      this.isBack: true,
+      this.isBack: false,
       this.titleColor})
       : assert(title != null),
         super(key: key);
