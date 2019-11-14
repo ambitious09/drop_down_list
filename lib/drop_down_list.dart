@@ -9,10 +9,10 @@ class DropDownList extends StatefulWidget {
   final String indexString;
   final Color titleColor;
   final Color answerColor;
-  final String iconPath;
-  final String rightPath;
   final Color iconTextColor;
   final Color lineColor;
+  final AssetImage image;
+  final Image  iconImage;
 
   const DropDownList(
       {Key key,
@@ -21,10 +21,10 @@ class DropDownList extends StatefulWidget {
         this.indexString,
         this.titleColor,
         this.answerColor,
-        this.iconPath,
-        this.rightPath,
         this.iconTextColor,
         this.lineColor,
+        this.image,
+        this.iconImage
      }
       ): assert(items.length > 0 && items != null),
         super(key: key);
@@ -34,13 +34,6 @@ class DropDownList extends StatefulWidget {
 }
 
 class _DropDownListState extends State<DropDownList> {
-   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    print("icpath=${widget.iconPath}");
-    print("icpath=${widget.rightPath}");
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +89,7 @@ class _DropDownListState extends State<DropDownList> {
                           height: 24,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage(widget.iconPath??Icons.add),
+                                image: widget.image,
                                 fit: BoxFit.fill),
                           ),
                           child: Text(
@@ -114,7 +107,7 @@ class _DropDownListState extends State<DropDownList> {
                     style: TextStyle(color: widget.titleColor, fontSize: 15),
                   ),
                 ),
-                Expanded(flex: 1, child: Image.asset(widget.rightPath))
+                Expanded(flex: 1, child: widget.iconImage)
               ],
             ),
           ),
