@@ -11,6 +11,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String actionName;
   final VoidCallback onPressed;
   final bool isBack;
+  final Color titleColor;
 
   const MyAppBar(
       {Key key,
@@ -20,7 +21,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.actionName: "",
       this.backImg,
       this.onPressed,
-      this.isBack: true})
+      this.isBack: true,
+      this.titleColor})
       : assert(title != null),
         super(key: key);
 
@@ -59,7 +61,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                           title.isEmpty ? centerTitle : title,
                           style: TextStyle(
                             fontSize: 18,
-                            color: _overlayStyle == SystemUiOverlayStyle.light ?  Colors.green : Colors.black12,
+                            color: titleColor,
                           )
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 48.0),
@@ -67,7 +69,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ],
                 ),
                 Offstage(
-                  offstage: isBack,
+                  offstage: backImg==null,
                   child: IconButton(
                     onPressed: (){
                       FocusScope.of(context).unfocus();

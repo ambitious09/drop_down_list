@@ -24,7 +24,7 @@ class DropDownList extends StatefulWidget {
         this.answerColor,
         this.iconTextColor,
         this.lineColor,
-        this.image, 
+        this.image,
         this.iconImage,
         this.backImage,
      }
@@ -40,7 +40,7 @@ class _DropDownListState extends State<DropDownList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(title: widget.title,backImg: widget.backImage,),
+      appBar: MyAppBar(title: widget.title,titleColor: widget.iconTextColor,),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
