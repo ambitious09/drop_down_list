@@ -10,6 +10,7 @@ class DropDownList extends StatefulWidget {
   final Color titleColor;
   final Color answerColor;
   final String iconPath;
+  final String rightPath;
   final Color iconTextColor;
   final Color lineColor;
 
@@ -21,6 +22,7 @@ class DropDownList extends StatefulWidget {
         this.titleColor,
         this.answerColor,
         this.iconPath,
+        this.rightPath,
         this.iconTextColor,
         this.lineColor,
      }
@@ -106,7 +108,7 @@ class _DropDownListState extends State<DropDownList> {
                     style: TextStyle(color: widget.titleColor, fontSize: 15),
                   ),
                 ),
-                Expanded(flex: 1, child: Image.asset('assets/arrow_bottom.png'))
+                Expanded(flex: 1, child: Image.asset(widget.rightPath))
               ],
             ),
           ),
