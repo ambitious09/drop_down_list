@@ -100,7 +100,7 @@ class _DropDownListState extends State<DropDownList> {
                                 fit: BoxFit.fill),
                           ),
                           child: Text(
-                            items[index].title,
+                            items[index].leftTitle,
                             style: TextStyle(color: widget.iconTextColor, fontSize: 12),
                             textAlign: TextAlign.center,
                           ))
