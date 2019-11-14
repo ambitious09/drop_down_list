@@ -11,8 +11,10 @@ class DropDownList extends StatefulWidget {
   final Color answerColor;
   final Color iconTextColor;
   final Color lineColor;
-  final AssetImage image;
-  final Image  iconImage;
+//  final AssetImage image;
+//  final Image  iconImage;
+  final String image;
+  final String  iconImage;
   final String backImage;
 
   const DropDownList(
@@ -40,7 +42,7 @@ class _DropDownListState extends State<DropDownList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(title: widget.title,titleColor: widget.iconTextColor,),
+      appBar: MyAppBar(title: widget.title,backImg: widget.backImage,titleColor: widget.iconTextColor,),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
@@ -91,7 +93,7 @@ class _DropDownListState extends State<DropDownList> {
                           height: 24,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: widget.image,
+                              image: AssetImage(widget.image),
                                 fit: BoxFit.fill),
                           ),
                           child: Text(
@@ -109,7 +111,7 @@ class _DropDownListState extends State<DropDownList> {
                     style: TextStyle(color: widget.titleColor, fontSize: 15),
                   ),
                 ),
-                Expanded(flex: 1, child: widget.iconImage
+                Expanded(flex: 1, child: Image.asset(widget.iconImage)
                 )
               ],
             ),

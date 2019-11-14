@@ -68,8 +68,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                     )
                   ],
                 ),
-                Offstage(
-                  offstage: backImg==null,
+                backImg!=null?Offstage(
+                  offstage: isBack,
                   child: IconButton(
                     onPressed: (){
                       FocusScope.of(context).unfocus();
@@ -82,7 +82,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       color: _overlayStyle == SystemUiOverlayStyle.light ? Colors.green : Colors.black12,
                     ),
                   ),
-                ),
+                ):SizedBox(),
                 Positioned(
                   right: 0.0,
                   child: Theme(
