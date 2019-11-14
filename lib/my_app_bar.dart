@@ -58,7 +58,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       alignment: centerTitle==null ? Alignment.centerLeft : Alignment.center,
                       width: double.infinity,
                       child: Text(
-                          title==null ? centerTitle : title,
+                          centerTitle ,
                           style: TextStyle(
                             fontSize: 18,
                             color: titleColor,
